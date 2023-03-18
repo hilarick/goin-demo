@@ -1,0 +1,29 @@
+@baseurl = http://127.0.0.1:3000
+
+### get all books
+
+http://127.0.0.1:3000/books
+
+### add book 
+POST http://127.0.0.1:3000/books HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Start with Why",
+  "author": "Simon Sinek"
+}
+
+### get book id 1
+GET  http://127.0.0.1:3000/books/1 HTTP/1.1
+
+
+###  patch (update) book id2 title and author @@@
+PATCH  http://127.0.0.1:3000/books/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "The Infinite Game",
+  "author": "Simon Sinek"
+}
+### delete book id 1
+DELETE http://127.0.0.1:3000/books/1
